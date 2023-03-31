@@ -52,12 +52,12 @@ module.exports = {
 
         return client.embed({
             title: `> ❓ Help panel`,
-            desc: `\`\`\`diff\n+Bienvenue dans le panneau d'aide du Bot ! Nous avons fait un petit tour d'horizon pour vous aider ! Faites votre choix via le menu ci-dessous\`\`\``,
+            desc: `\`\`\`fix\nBienvenue dans le panneau d'aide du Bot ! Nous avons fait un petit tour d'horizon pour vous aider ! Faites votre choix via le menu ci-dessous\`\`\``,
             image: "https://i.imgur.com/kLb13Tr.gif",
             fields: [
                 {
                     name: `❌・Le menu marche pas ?`,
-                    value: `\`\`\`diff\n+Essayez de renvoyer la commande. Si vous n'obtenez aucune réaction, assurez-vous de signaler le bogue !\`\`\``
+                    value: `\`\`\`\nEssayez de renvoyer la commande. Si vous n'obtenez aucune réaction, assurez-vous de signaler le bogue !\`\`\``
                 },
                 {
                     name: `🪲・Beug trouvé ?`,
