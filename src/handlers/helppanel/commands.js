@@ -254,7 +254,7 @@ module.exports = async (client) => {
                     );
 
                 client.embed({
-                    title: `❓・Help panel`,
+                    title: `> ❓ Help panel`,
                     desc: `Voir toutes les catégories de commandes dans le bot ici ! \n\n[Website](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be) | [Invite](${client.config.discord.botInvite}) | [Vote](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be)`,
                     image: "https://i.imgur.com/kLb13Tr.gif",
                     fields: fields.slice(0, 24),
@@ -269,7 +269,7 @@ module.exports = async (client) => {
                         if (i.customId == "helpNext") {
                             if (page == 1) {
                                 client.embed({
-                                    title: `❓・Help panel`,
+                                    title: `> ❓ Help panel`,
                                     desc: `View all command categories in the bot here! \n\n[Website](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be) | [Invite](${client.config.discord.botInvite}) | [Vote](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be)`,
                                     fields: fields.slice(25, 49),
                                     image: "https://i.imgur.com/kLb13Tr.gif",
@@ -283,7 +283,7 @@ module.exports = async (client) => {
                         else if (i.customId == "helpPrev") {
                             if (page == 2) {
                                 client.embed({
-                                    title: `❓・Help panel`,
+                                    title: `> ❓ Help panel`,
                                     desc: `View all command categories in the bot here! \n\n[Website](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be) | [Invite](${client.config.discord.botInvite}) | [Vote](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be)`,
                                     fields: fields.slice(0, 24),
                                     image: "https://i.imgur.com/kLb13Tr.gif",

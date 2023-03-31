@@ -42,7 +42,7 @@ module.exports = async (client) => {
                     );
 
                 client.embed({
-                    title: "📃・Changelogs",
+                    title: "> 📃 Changelogs",
                     desc: `_____`,
                     thumbnail: client.user.avatarURL({ size: 1024 }),
                     fields: [

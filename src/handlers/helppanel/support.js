@@ -50,7 +50,7 @@ module.exports = async (client) => {
                     );
 
                 client.embed({
-                    title: `❓・Support`,
+                    title: `> ❓ Support`,
                     desc: `Rendez votre serveur encore meilleur avec ${client.user.username}!`,
                     image: "https://i.imgur.com/kLb13Tr.gif",
                     url: client.config.discord.serverInvite,
