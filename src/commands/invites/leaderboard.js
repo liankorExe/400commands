@@ -10,9 +10,8 @@ module.exports = async (client, interaction, args) => {
         type: 'editreply'
     }, interaction);
 
-    const lb = rawLeaderboard.map(e => `**${rawLeaderboard.findIndex(i => i.Guild === interaction.guild.id && i.User === e.User) + 1}** | <@!${e.User}> - Invites: \`${e.Invites}\``);
+    const lb = rawLeaderboard.map(e => `**${rawLeaderboard.findIndex(i => i.Guild === interaction.guild.id && i.User === e.User) + 1}** ・ <@!${e.User}> - Invites: \`${e.Invites}\``);
 
     await client.createLeaderboard(`📨・Invites - ${interaction.guild.name}`, lb, interaction);
 }
 
- 

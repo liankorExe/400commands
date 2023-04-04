@@ -28,7 +28,7 @@ module.exports = async (client, interaction, args) => {
             Left: 0
         }).save();
     }
-
+    console.log(data)
     client.succNormal({
         text: `Added **${amount}** invites to ${user}`,
         fields: [
@@ -42,4 +42,3 @@ module.exports = async (client, interaction, args) => {
     }, interaction);
 }
 
- 
