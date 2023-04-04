@@ -28,18 +28,18 @@ module.exports = (client) => {
         }
 
         const months = {
-            1: "January",
-            2: "February",
-            3: "March",
-            4: "April",
-            5: "May",
-            6: "June",
-            7: "July",
-            8: "August",
-            9: "September",
-            10: "October",
-            11: "November",
-            12: "December"
+            1: "Janvier",
+            2: "Février",
+            3: "Mars",
+            4: "Avril",
+            5: "Mai",
+            6: "Join",
+            7: "Juillet",
+            8: "Aout",
+            9: "Septembre",
+            10: "Octobre",
+            11: "Novembre",
+            12: "Decembre"
         };
 
         const convertedDay = suffixes(day);
@@ -57,8 +57,8 @@ module.exports = (client) => {
                     birthdayChannel.findOne({ Guild: finalGuild.id }, async (err, data) => {
                         if (data) {
                             const channel = finalGuild.channels.cache.get(data.Channel);
-                            
-                            client.embed({ 
+
+                            client.embed({
                                 title: `${client.emotes.normal.birthday}・Birthday`,
                                 desc: `Happy birthday to <@!${User}>!`
                             }, channel)
@@ -85,4 +85,3 @@ function suffixes(number) {
                 ? `${converted}rd` : `${converted}th`
 }
 
- 

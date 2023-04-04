@@ -46,14 +46,14 @@ module.exports = async (client) => {
 
                         new Discord.ButtonBuilder()
                             .setLabel("Community Server")
-                            .setURL("https://discord.gg/jf6ZkpgsXF")
+                            .setURL(process.env.DISCORDLINK)
                             .setStyle(Discord.ButtonStyle.Link),
                     );
 
                 client.embed({
                     title: `🌍・Community Server`,
                     desc: `Talk and play games in the comunity server!`,
-                    image: "https://cdn.discordapp.com/attachments/843487478881976381/874694194474668052/Bot_banner_invite.jpg",
+                    image: process.env.BANNER,
                     url: client.config.discord.botInvite,
                     components: [row2, row],
                     type: 'edit'
@@ -63,4 +63,3 @@ module.exports = async (client) => {
     })
 }
 
- 

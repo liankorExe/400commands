@@ -10,7 +10,7 @@ module.exports = async (client, interaction, args) => {
 
     if (message == "information") {
         client.simpleEmbed({
-            image: `https://i.imgur.com/kLb13Tr.gif`
+            image: process.env.BANNER
         }, interaction.channel).then(() => {
             client.embed({
                 title: `ℹ️・Information`,
@@ -40,7 +40,7 @@ module.exports = async (client, interaction, args) => {
 
     if (message == "rules") {
         client.simpleEmbed({
-            image: `https://i.imgur.com/kLb13Tr.gif`
+            image: process.env.BANNER
         }, interaction.channel).then(async () => {
             await client.embed({
                 title: `📃・Regles`,
@@ -102,7 +102,7 @@ module.exports = async (client, interaction, args) => {
 
     if (message == "applications") {
         client.simpleEmbed({
-            image: `https://i.imgur.com/kLb13Tr.gif`
+            image: process.env.BANNER
         }, interaction.channel).then(() => {
             client.embed({
                 title: `💼・Applications`,
@@ -140,7 +140,7 @@ module.exports = async (client, interaction, args) => {
 
     if (message == "boosterperks") {
         client.simpleEmbed({
-            image: `https://i.imgur.com/kLb13Tr.gif`
+            image: process.env.BANNER
         }, interaction.channel).then(() => {
             client.embed({
                 title: `💎・Booster Perks`,
@@ -199,7 +199,7 @@ module.exports = async (client, interaction, args) => {
 
     if (message == "links") {
         client.simpleEmbed({
-            image: `https://i.imgur.com/kLb13Tr.gif`
+            image: process.env.BANNER
         }, interaction.channel).then(() => {
             client.embed({
                 title: `🔗・Links`,
@@ -239,7 +239,7 @@ module.exports = async (client, interaction, args) => {
 
     if (message == "ourbots") {
         client.simpleEmbed({
-            image: `https://i.imgur.com/kLb13Tr.gif`
+            image: process.env.BANNER
         }, interaction.channel).then(() => {
             client.embed({
                 title: `🤖・Our bots`,

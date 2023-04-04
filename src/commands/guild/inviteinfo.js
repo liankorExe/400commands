@@ -4,7 +4,8 @@ const axios = require("axios");
 const model = require('../../database/models/badge');
 
 module.exports = async (client, interaction, args) => {
-  const invite = interaction.options.getString('invite');
+  const AllInvite = interaction.options.getString('invite');
+  const invite = AllInvite.split("discord.gg/")[1]
 
   const verifyFlags = {
     0: `Unrestricted`,
@@ -108,4 +109,3 @@ const idToBinary = (num) => {
   return bin;
 }
 
-   

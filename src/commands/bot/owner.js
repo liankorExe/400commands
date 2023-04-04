@@ -22,7 +22,7 @@ module.exports = async (client, interaction, args) => {
         },
         {
             name: "🌐┆Website",
-            value: `[Ici](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be)`,
+            value: `[Ici](${process.env.WEBSITE})`,
             inline: true,
         }],
         type: 'editreply'

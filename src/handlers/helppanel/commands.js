@@ -255,8 +255,8 @@ module.exports = async (client) => {
 
                 client.embed({
                     title: `> ❓ Help panel`,
-                    desc: `Voir toutes les catégories de commandes dans le bot ici ! \n\n[Website](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be) | [Invite](${client.config.discord.botInvite}) | [Vote](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be)`,
-                    image: "https://i.imgur.com/kLb13Tr.gif",
+                    desc: `Voir toutes les catégories de commandes dans le bot ici ! \n\n[Website](${process.env.WEBSITE}) | [Invite](${client.config.discord.botInvite}) | [Vote](${process.env.VOTE})`,
+                    image: process.env.BANNER,
                     fields: fields.slice(0, 24),
                     components: [row2, row],
                     type: 'edit'
@@ -270,9 +270,9 @@ module.exports = async (client) => {
                             if (page == 1) {
                                 client.embed({
                                     title: `> ❓ Help panel`,
-                                    desc: `View all command categories in the bot here! \n\n[Website](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be) | [Invite](${client.config.discord.botInvite}) | [Vote](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be)`,
+                                    desc: `View all command categories in the bot here! \n\n[Website](${process.env.WEBSITE}) | [Invite](${client.config.discord.botInvite}) | [Vote](${process.env.VOTE})`,
                                     fields: fields.slice(25, 49),
-                                    image: "https://i.imgur.com/kLb13Tr.gif",
+                                    image: process.env.BANNER,
                                     components: [row2, row],
                                     type: 'update'
                                 }, i)
@@ -284,9 +284,9 @@ module.exports = async (client) => {
                             if (page == 2) {
                                 client.embed({
                                     title: `> ❓ Help panel`,
-                                    desc: `View all command categories in the bot here! \n\n[Website](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be) | [Invite](${client.config.discord.botInvite}) | [Vote](https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be)`,
+                                    desc: `View all command categories in the bot here! \n\n[Website](${process.env.WEBSITE}) | [Invite](${client.config.discord.botInvite}) | [Vote](${process.env.VOTE})`,
                                     fields: fields.slice(0, 24),
-                                    image: "https://i.imgur.com/kLb13Tr.gif",
+                                    image: process.env.BANNER,
                                     components: [row2, row],
                                     type: 'update'
                                 }, i)

@@ -53,7 +53,7 @@ module.exports = {
         return client.embed({
             title: `> ❓ Help panel`,
             desc: `\`\`\`fix\nBienvenue dans le panneau d'aide du Bot ! Nous avons fait un petit tour d'horizon pour vous aider ! Faites votre choix via le menu ci-dessous\`\`\``,
-            image: "https://i.imgur.com/kLb13Tr.gif",
+            image: process.env.BANNER,
             fields: [
                 {
                     name: `❌・Le menu marche pas ?`,
@@ -65,7 +65,7 @@ module.exports = {
                 },
                 {
                     name: `🔗・Liens`,
-                    value: `[Website](https://youtu.be/dQw4w9WgXcQ) | [Invite](${client.config.discord.botInvite}) | [Vote](https://youtu.be/dQw4w9WgXcQ)`
+                    value: `[Website](${process.env.WEBSITE} | [Invite](${client.config.discord.botInvite}) | [Vote](${process.env.VOTE})`
                 },
             ],
             components: [row],

@@ -10,7 +10,7 @@ module.exports = async (client, interaction, args) => {
         .addComponents(
             new Discord.ButtonBuilder()
                 .setLabel("Vote pour moi")
-                .setURL("https://top.gg/bot/798144456528363550/vote")
+                .setURL(process.env.VOTE)
                 .setStyle(Discord.ButtonStyle.Link),
         );
 
@@ -19,7 +19,7 @@ module.exports = async (client, interaction, args) => {
             client.embed({
                 title: `📨・Vote`,
                 desc: `Tu as voté !`,
-                image: `https://i.imgur.com/kLb13Tr.gif`,
+                image: process.env.BANNER,
                 color: client.config.colors.succes,
                 components: [row],
                 type: 'editreply'
@@ -29,7 +29,7 @@ module.exports = async (client, interaction, args) => {
             client.embed({
                 title: `📨・Vote`,
                 desc: `Tu n'as pas voté !`,
-                image: `https://i.imgur.com/kLb13Tr.gif`,
+                image: process.env.BANNER,
                 color: client.config.colors.error,
                 components: [row],
                 type: 'editreply'

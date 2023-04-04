@@ -46,15 +46,15 @@ module.exports = async (client) => {
 
                         new Discord.ButtonBuilder()
                             .setLabel("Vote Now")
-                            .setURL("https://top.gg/bot/798144456528363550/vote")
+                            .setURL(process.env.VOTE)
                             .setStyle(Discord.ButtonStyle.Link),
                     );
 
                 client.embed({
                     title: `📃・Bot Vote`,
                     desc: `Vote for Bot on top.gg`,
-                    image: "https://cdn.discordapp.com/attachments/843487478881976381/874694192755007509/Bot_banner_vote.jpg",
-                    url: "https://top.gg/bot/798144456528363550/vote",
+                    image: process.env.BANNER,
+                    url: process.env.VOTE,
                     components: [row2, row],
                     type: 'edit'
                 }, interaction.message)
@@ -63,4 +63,3 @@ module.exports = async (client) => {
     })
 }
 
- 

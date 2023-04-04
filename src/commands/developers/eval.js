@@ -9,7 +9,7 @@ module.exports = async (client, interaction, args) => {
     });
 
     let code = interaction.options.getString('code');
-    if (code.includes('token') == true) return client.errNormal({ error: "Je ne vais pas envoyer mon jeton !", type: 'editreply' }, interaction);
+    if (code.includes('token')) return client.errNormal({ error: "Je ne vais pas envoyer mon token espece d'imbeeeeecilllleeee !", type: 'editreply' }, interaction);
 
     code = code.replace(/[""]/g, '"').replace(/['']/g, "'");
     let evaled;

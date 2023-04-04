@@ -52,7 +52,7 @@ module.exports = async (client) => {
                 client.embed({
                     title: `📨・Bot Invite`,
                     desc: `Rendez votre serveur encore meilleur avec Bot !`,
-                    image: "https://i.imgur.com/kLb13Tr.gif",
+                    image: process.env.BANNER,
                     url: client.config.discord.serverInvite,
                     components: [row2, row],
                     type: 'edit'
