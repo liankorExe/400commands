@@ -5,7 +5,7 @@ const model = require('../../database/models/badge');
 
 module.exports = async (client, interaction, args) => {
   const AllInvite = interaction.options.getString('invite');
-  const invite = AllInvite.split("discord.gg/")[1]
+  const invite = AllInvite.includes("https://discord.gg/") ? AllInvite.split("discord.gg/")[1] : AllInvite
   const verifyFlags = {
     0: `Unrestricted`,
     1: `Must have verified email on account`,
