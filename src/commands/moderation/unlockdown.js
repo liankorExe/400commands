@@ -11,15 +11,14 @@ module.exports = async (client, interaction, args) => {
     interaction.guild.channels.cache.forEach(ch => {
         if (ch.type == Discord.ChannelType.GuildText) {
             ch.permissionOverwrites.edit(interaction.guild.id, {
-                SendMessages: false,
+                SendMessages: true,
             });
         }
     })
 
     client.succNormal({
-        text: "Tous les salons on étaient vérouillé !",
+        text: "Tous les salons on étaient dévérouillé !",
         type: 'editreply'
     }, interaction);
 }
 
- 

@@ -57,6 +57,11 @@ module.exports = {
         )
         .addSubcommand(subcommand =>
             subcommand
+                .setName('unlockdown')
+                .setDescription('unLock all channels')
+        )
+        .addSubcommand(subcommand =>
+            subcommand
                 .setName('nuke')
                 .setDescription('Nuke a channel')
         )
@@ -134,4 +139,3 @@ module.exports = {
     },
 };
 
- 
