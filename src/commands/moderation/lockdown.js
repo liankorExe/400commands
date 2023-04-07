@@ -9,12 +9,13 @@ module.exports = async (client, interaction, args) => {
     if (perms == false) return;
 
     interaction.guild.channels.cache.forEach(ch => {
-        console.log(ch)
         if (ch.type == Discord.ChannelType.GuildText) {
             ch.permissionOverwrites.edit(interaction.guild.id, {
                 SendMessages: false,
             });
-            ch.setName(ch.name + " lock")
+            setTimeout(() => {
+                ch.setName(ch.name + " lock")
+            }, 1000);
         }
     })
 

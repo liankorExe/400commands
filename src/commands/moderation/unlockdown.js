@@ -14,6 +14,9 @@ module.exports = async (client, interaction, args) => {
             ch.permissionOverwrites.edit(interaction.guild.id, {
                 SendMessages: true,
             });
+            setTimeout(() => {
+                ch.setName(ch.name.split("lock")[0])
+            }, 1000);
         }
     })
 
