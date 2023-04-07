@@ -10,6 +10,7 @@ module.exports = async (client, interaction, args) => {
 
     interaction.guild.channels.cache.forEach(ch => {
         if (ch.type == Discord.ChannelType.GuildText) {
+            if (!ch.name.includes("lock")) return;
             ch.permissionOverwrites.edit(interaction.guild.id, {
                 SendMessages: true,
             });
