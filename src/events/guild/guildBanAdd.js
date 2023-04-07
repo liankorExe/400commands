@@ -5,8 +5,8 @@ module.exports = async (client, ban) => {
     if (!logsChannel) return;
 
     client.embed({
-        title: `🔧・Member banned`,
-        desc: `A user has been banned`,
+        title: `🔧・Membre banni`,
+        desc: `Un utilisateur viens d'etre ban !`,
         thumbnail: ban.user.avatarURL({ size: 4096 }),
         fields: [
             {

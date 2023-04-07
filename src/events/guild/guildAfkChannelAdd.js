@@ -5,11 +5,11 @@ module.exports = async (client, guild, afkChannel) => {
     if (!logsChannel) return;
 
     client.embed({
-        title: `🛑・New AFK channel`,
-        desc: `An AFK channel has been added to the server`,
+        title: `🛑・Nouveau salon AFK`,
+        desc: `Un Salon AFK a été ajouté a ce serveur`,
         fields: [
             {
-                name: `> Channel`,
+                name: `> Salon`,
                 value: `- ${afkChannel}`
             },
             {

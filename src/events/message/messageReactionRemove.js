@@ -27,7 +27,7 @@ module.exports = async (client, reaction, user) => {
       const foundStar = stars.embeds[0];
       const image = reaction.message.attachments.size > 0 ? await extension(reaction, reaction.message.attachments.first()?.url) : "";
       const starMsg = await starboardChannel.messages.fetch(stars.id);
-      
+
       if (reaction.count <= 0) {
         starMsg.delete();
       }
@@ -48,7 +48,7 @@ module.exports = async (client, reaction, user) => {
               inline: true
             },
             {
-              name: `👤┇Author`,
+              name: `👤┇Auteur`,
               value: `${reaction.message.author} (${reaction.message.author.tag})`,
               inline: true
             }
@@ -69,4 +69,4 @@ function extension(reaction, attachment) {
   return attachment;
 }
 
- 
+

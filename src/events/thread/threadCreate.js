@@ -2,20 +2,20 @@ const discord = require('discord.js');
 
 module.exports = async (client, channel) => {
     let types = {
-        10: "News Thread",
-        11: "Public Thread",
-        12: "Private Thread",
+        10: "Fil d'actualités",
+        11: "Fil publique",
+        12: "Fil priver",
     }
 
     const logsChannel = await client.getLogs(channel.guild.id);
     if (!logsChannel) return;
 
     client.embed({
-        title: `📖・Thread created`,
-        desc: `A thread has been created`,
+        title: `📖・Fil créé`,
+        desc: `Un fil viens d'etre créé`,
         fields: [
             {
-                name: `> Name`,
+                name: `> Nom`,
                 value: `- ${channel.name}`
             },
             {
@@ -23,11 +23,11 @@ module.exports = async (client, channel) => {
                 value: `- ${channel.id}`
             },
             {
-                name: `> Category`,
+                name: `> Categorie`,
                 value: `${channel.parent}`
             },
             {
-                name: `> Channel`,
+                name: `> Salon`,
                 value: `<#${channel.id}>`
             },
             {

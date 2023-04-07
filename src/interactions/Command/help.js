@@ -65,7 +65,7 @@ module.exports = {
                 },
                 {
                     name: `🔗・Liens`,
-                    value: `[Website](${process.env.WEBSITE} | [Invite](${client.config.discord.botInvite}) | [Vote](${process.env.VOTE})`
+                    value: `[Website](${process.env.WEBSITE}) | [Invite](${client.config.discord.botInvite}) | [Vote](${process.env.VOTE})`
                 },
             ],
             components: [row],

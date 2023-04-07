@@ -5,15 +5,15 @@ module.exports = async (client, role) => {
     if (!logsChannel) return;
 
     client.embed({
-        title: `🧻・Role deleted`,
-        desc: `A role has been deleted`,
+        title: `🧻・Rôle supprimé`,
+        desc: `Un rôle a été supprimé`,
         fields: [
             {
                 name: `> Role`,
                 value: `- ${role}`
             },
             {
-                name: `> Name`,
+                name: `> Nom`,
                 value: `- ${role.name}`
             },
             {
@@ -21,7 +21,7 @@ module.exports = async (client, role) => {
                 value: `- ${role.id}`
             },
             {
-                name: `> Color`,
+                name: `> Couleur`,
                 value: `${role.hexColor}`
             },
             {

@@ -5,8 +5,8 @@ module.exports = async (client, guild, url) => {
     if (!logsChannel) return;
 
     client.embed({
-        title: `🔗・New Vanity URL`,
-        desc: `The server vanity URL has been updated`,
+        title: `🔗・Nouvelle URL personnalisée`,
+        desc: `L'URL personnalisée du serveur a été mise à jour`,
         fields: [
             {
                 name: `> URL`,

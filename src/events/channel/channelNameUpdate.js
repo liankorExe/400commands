@@ -2,30 +2,30 @@ const discord = require('discord.js');
 
 module.exports = async (client, channel, oldName, newName) => {
     let types = {
-        0: "Text Channel",
-        2: "Voice Channel",
-        4: "Category",
-        5: "News Channel",
-        10: "News Thread",
-        11: "Public Thread",
-        12: "Private Thread",
+        0: "Salon Textuel",
+        2: "Salon Vocal",
+        4: "Categorie",
+        5: "Channel Annonces",
+        10: "Fils Annonces",
+        11: "Fils Publique",
+        12: "Fils Priver",
         13: "Stage Channel",
-        14: "Category",
+        14: "Categorie",
     }
 
     const logsChannel = await client.getLogs(channel.guild.id);
     if (!logsChannel) return;
 
     client.embed({
-        title: `🔧・Channel name adjusted`,
-        desc: `One channel name modified`,
+        title: `🔧・Nom du salon modifié`,
+        desc: `Un nom de salon a été modifié`,
         fields: [
             {
-                name: `> Old Name`,
+                name: `> Ancien nom`,
                 value: `- ${oldName}`
             },
             {
-                name: `> New Name`,
+                name: `> Nouveau nom`,
                 value: `- ${newName}`
             },
             {
@@ -33,11 +33,11 @@ module.exports = async (client, channel, oldName, newName) => {
                 value: `- ${channel.id}`
             },
             {
-                name: `> Category`,
+                name: `> Categorie`,
                 value: `- ${channel.parent}`
             },
             {
-                name: `> Channel`,
+                name: `> Salon`,
                 value: `- <#${channel.id}>`
             },
             {

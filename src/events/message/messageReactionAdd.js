@@ -7,21 +7,21 @@ module.exports = async (client, reaction, user) => {
   if (reaction.partial) await reaction.fetch().catch(() => { });
 
   if (reaction.emoji.name === "⭐") {
-	const data = await StarBoard.findOne({ Guild: reaction.message.guild.id });
+    const data = await StarBoard.findOne({ Guild: reaction.message.guild.id });
     if (!data) return;
-      
+
     if (reaction.message.author.id === user.id)
       return client.errNormal({
-        error: `You cannot star your own messages\n\nMessage: ${reaction.message.cleanContent}`,
+        error: `Vous ne pouvez pas mettre en vedette vos propres messages\n\nMessage: ${reaction.message.cleanContent}`,
       }, client.users.cache.get(user.id));
 
     if (reaction.message.author.bot) return client.errNormal({
-      error: `You cannot star bot messages\n\nMessage: ${reaction.message.cleanContent}`,
+      error: `Vous ne pouvez pas suivre les messages du bot\n\nMessage: ${reaction.message.cleanContent}`,
     }, client.users.cache.get(user.id));
 
     const starboardChannel = reaction.message.guild.channels.cache.get(data.Channel);
     if (!starboardChannel) return client.errNormal({
-      error: `No star channel found! Run the channel setup`,
+      error: `Aucune chaîne star trouvée ! Exécutez la configuration du canal`,
     }, client.users.cache.get(user.id));
 
     const fetch = await starboardChannel.messages.fetch({ limit: 100 });
@@ -47,11 +47,11 @@ module.exports = async (client, reaction, user) => {
           },
           {
             name: `🗨️┇Message`,
-            value: `[Jump to the message](${reaction.message.url})`,
+            value: `[Aller au message](${reaction.message.url})`,
             inline: true
           },
           {
-            name: `👤┇Author`,
+            name: `👤┇Auteur`,
             value: `${reaction.message.author} (${reaction.message.author.tag})`,
             inline: true
           }
@@ -63,7 +63,7 @@ module.exports = async (client, reaction, user) => {
     if (!stars) {
       const image = reaction.message.attachments.size > 0 ? await extension(reaction, reaction.message.attachments.first()?.url) : "";
       if (image === "" && reaction.message.cleanContent.length < 1) return client.errNormal({
-        error: `You cannot star an empty message`,
+        error: `Vous ne pouvez pas suivre un message vide`,
         type: 'ephemeral'
       }, reaction.message);
 
@@ -83,7 +83,7 @@ module.exports = async (client, reaction, user) => {
             inline: true
           },
           {
-            name: `👤┇Author`,
+            name: `👤┇Auteur`,
             value: `${reaction.message.author} (${reaction.message.author.tag})`,
             inline: true
           }
@@ -102,4 +102,4 @@ function extension(reaction, attachment) {
   return attachment;
 }
 
- 
+

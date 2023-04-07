@@ -5,8 +5,8 @@ module.exports = async (client, ban) => {
     if (!logsChannel) return;
 
     client.embed({
-        title: `🔧・Member unbanned`,
-        desc: `A user has been unbanned`,
+        title: `🔧・Membre débanni`,
+        desc: `Un utilisateur viens d'etre débanni`,
         thumbnail: ban.user.avatarURL({ size: 4096 }),
         fields: [
             {

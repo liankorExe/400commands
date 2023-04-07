@@ -2,24 +2,24 @@ const discord = require('discord.js');
 
 module.exports = async (client, oldChannel, newChannel) => {
     let types = {
-        10: "News Thread",
-        11: "Public Thread",
-        12: "Private Thread",
+        10: "Fil d'actualités",
+        11: "Fil publique",
+        12: "Fil priver",
     }
 
     const logsChannel = await client.getLogs(newChannel.guild.id);
     if (!logsChannel) return;
 
     client.embed({
-        title: `📖・Thread created`,
-        desc: `A thread has been created`,
+        title: `📖・Fil modifié`,
+        desc: `Un fil viens d'etre modifié`,
         fields: [
             {
-                name: `> Old name`,
+                name: `> Ancien nom`,
                 value: `- ${oldChannel.name}`
             },
             {
-                name: `> New name`,
+                name: `> Nouveau nom`,
                 value: `- ${newChannel.name}`
             },
             {
@@ -27,11 +27,11 @@ module.exports = async (client, oldChannel, newChannel) => {
                 value: `- ${newChannel.id}`
             },
             {
-                name: `> Category`,
+                name: `> Categorie`,
                 value: `${newChannel.parent}`
             },
             {
-                name: `> Channel`,
+                name: `> Salon`,
                 value: `<#${newChannel.id}>`
             },
             {
