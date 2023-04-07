@@ -10,6 +10,9 @@ module.exports = async (client, interaction, args) => {
 
     interaction.guild.channels.cache.forEach(ch => {
         if (ch.type == Discord.ChannelType.GuildText) {
+            const permissions = ch.permissionsFor(ch.guild.roles.everyone);
+            const canSendMessages = permissions.has("SEND_MESSAGES");
+            if (!canSendMessages) return;
             ch.permissionOverwrites.edit(interaction.guild.id, {
                 SendMessages: false,
             });
